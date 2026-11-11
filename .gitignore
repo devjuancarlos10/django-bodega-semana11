@@ -1,0 +1,18 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Base de datos local (nunca se commitea, ver guia paso 5)
+db.sqlite3
+db.sqlite3-journal
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Editor / SO
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+.env

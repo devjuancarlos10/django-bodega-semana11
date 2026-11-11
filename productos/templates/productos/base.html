@@ -1,0 +1,34 @@
+{% load static %}<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bodega Don Lucho{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'productos/css/estilos.css' %}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header class="topbar">
+        <a class="logo" href="{% url 'productos:home' %}">Bodega Don Lucho</a>
+        <nav>
+            {# Nunca se escriben rutas a mano: se resuelven con {% url %} #}
+            <a href="{% url 'productos:home' %}"
+               class="{% if request.resolver_match.url_name == 'home' %}activo{% endif %}">Inicio</a>
+            <a href="{% url 'productos:catalogo' %}"
+               class="{% if request.resolver_match.url_name == 'catalogo' %}activo{% endif %}">Catálogo</a>
+            <a href="{% url 'admin:index' %}">Admin</a>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="pie">
+        {% block footer %}
+            <p>Bodega Don Lucho &middot; Huancayo &middot; {% now "Y" %}</p>
+            <p class="muted">Práctica Semana 11 &ndash; Django {{ django_version|default:"5.x" }} (patrón MTV)</p>
+        {% endblock %}
+    </footer>
+</body>
+</html>

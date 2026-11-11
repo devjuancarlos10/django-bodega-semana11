@@ -1,0 +1,26 @@
+{% extends 'productos/base.html' %}
+
+{% block title %}{{ producto.nombre|title }} | {{ block.super }}{% endblock %}
+
+{% block content %}
+<a href="{% url 'productos:catalogo' %}">&laquo; Volver al catálogo</a>
+
+<article class="detalle">
+    <span class="etiqueta">{{ producto.get_categoria_display }}</span>
+    <h1>{{ producto.nombre|title }}</h1>
+    <p>{{ producto.descripcion|default:"Este producto aún no tiene descripción."|linebreaksbr }}</p>
+
+    <dl>
+        <dt>Precio</dt>
+        <dd class="precio">S/ {{ producto.precio|floatformat:2 }}</dd>
+        <dt>Stock</dt>
+        <dd>{{ producto.stock }} unidad{{ producto.stock|pluralize:"es" }}</dd>
+        <dt>Valor en inventario</dt>
+        <dd>S/ {{ producto.valor_inventario|floatformat:2 }}</dd>
+        <dt>Estado</dt>
+        <dd>{% if producto.disponible %}Disponible{% else %}No disponible{% endif %}</dd>
+        <dt>Fecha de registro</dt>
+        <dd>{{ producto.fecha_registro|date:"l, d \d\e F \d\e Y" }}</dd>
+    </dl>
+</article>
+{% endblock %}

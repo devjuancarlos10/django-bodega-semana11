@@ -1,0 +1,40 @@
+{% extends 'productos/base.html' %}
+
+{% block title %}Inicio | {{ block.super }}{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>{{ titulo|title }}</h1>
+    <p>Tu bodega de confianza en Huancayo: abarrotes, bebidas, lácteos y más.</p>
+    <a class="boton" href="{% url 'productos:catalogo' %}">Ver catálogo completo</a>
+</section>
+
+<section class="tarjetas-resumen">
+    <article class="resumen">
+        <span class="cifra">{{ total_productos }}</span>
+        <span>producto{{ total_productos|pluralize }} registrado{{ total_productos|pluralize }}</span>
+    </article>
+    <article class="resumen">
+        <span class="cifra">{{ total_unidades }}</span>
+        <span>unidades en almacén</span>
+    </article>
+    <article class="resumen {% if alertas_stock %}alerta{% endif %}">
+        <span class="cifra">{{ alertas_stock|length }}</span>
+        <span>con stock bajo (&le; 10)</span>
+    </article>
+</section>
+
+<h2>Últimos productos agregados</h2>
+<div class="grilla">
+    {% for producto in destacados %}
+        <article class="card">
+            <span class="etiqueta">{{ producto.get_categoria_display }}</span>
+            <h3><a href="{{ producto.get_absolute_url }}">{{ producto.nombre|title }}</a></h3>
+            <p class="precio">S/ {{ producto.precio|floatformat:2 }}</p>
+            <p class="muted">Registrado: {{ producto.fecha_registro|date:"d/m/Y" }}</p>
+        </article>
+    {% empty %}
+        <p class="vacio">Aún no hay productos. Ejecuta <code>python manage.py poblar_productos</code>.</p>
+    {% endfor %}
+</div>
+{% endblock %}
