@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexo: organiza tus tareas y proyectos en un solo lugar.">
+  <title>Nexo | Organiza tu trabajo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navegación -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#inicio" class="logo">Nexo<span>.</span></a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#contacto" class="btn btn-primary btn-sm">Empezar gratis</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="badge">Nuevo · Versión 2.0</span>
+          <h1>Organiza tu trabajo <span class="highlight">sin complicaciones</span></h1>
+          <p>Nexo reúne tus tareas, proyectos y equipo en un solo lugar. Menos caos, más resultados.</p>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-primary">Comenzar ahora</a>
+            <a href="#como-funciona" class="btn btn-outline">Ver cómo funciona</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>10k+</strong><span>usuarios</span></li>
+            <li><strong>98%</strong><span>satisfacción</span></li>
+            <li><strong>24/7</strong><span>soporte</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="mock-card">
+            <div class="mock-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            </div>
+            <div class="mock-body">
+              <div class="mock-task done"><span class="check">✓</span> Diseñar la landing page</div>
+              <div class="mock-task done"><span class="check">✓</span> Revisar con el equipo</div>
+              <div class="mock-task"><span class="check"></span> Publicar el sitio</div>
+              <div class="mock-progress"><div class="mock-bar"></div></div>
+              <small>2 de 3 tareas completadas</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Características -->
+    <section class="section" id="caracteristicas">
+      <div class="container">
+        <div class="section-head">
+          <h2>Todo lo que necesitas</h2>
+          <p>Herramientas simples para que tu equipo trabaje mejor.</p>
+        </div>
+
+        <div class="features">
+          <article class="feature reveal">
+            <div class="feature-icon">⚡</div>
+            <h3>Rápido</h3>
+            <p>Crea tareas en segundos y encuentra todo al instante.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon">🤝</div>
+            <h3>Colaborativo</h3>
+            <p>Comparte proyectos y comenta en tiempo real con tu equipo.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon">🔒</div>
+            <h3>Seguro</h3>
+            <p>Tus datos se cifran y respaldan automáticamente.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon">📱</div>
+            <h3>Multiplataforma</h3>
+            <p>Úsalo desde tu computadora, tablet o celular.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="section section-alt" id="como-funciona">
+      <div class="container">
+        <div class="section-head">
+          <h2>Cómo funciona</h2>
+          <p>Empieza en tres pasos.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">1</span>
+            <h3>Crea tu cuenta</h3>
+            <p>Regístrate gratis en menos de un minuto.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">2</span>
+            <h3>Invita a tu equipo</h3>
+            <p>Agrega a tus compañeros por correo.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">3</span>
+            <h3>Empieza a avanzar</h3>
+            <p>Organiza tareas y mide el progreso.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Precios -->
+    <section class="section" id="precios">
+      <div class="container">
+        <div class="section-head">
+          <h2>Planes simples</h2>
+          <p>Sin sorpresas. Cancela cuando quieras.</p>
+        </div>
+
+        <div class="pricing">
+          <div class="plan reveal">
+            <h3>Gratis</h3>
+            <p class="price">S/ 0<span>/mes</span></p>
+            <ul>
+              <li>Hasta 3 proyectos</li>
+              <li>1 usuario</li>
+              <li>Soporte por correo</li>
+            </ul>
+            <a href="#contacto" class="btn btn-outline">Elegir plan</a>
+          </div>
+          <div class="plan plan-featured reveal">
+            <span class="plan-tag">Más popular</span>
+            <h3>Pro</h3>
+            <p class="price">S/ 29<span>/mes</span></p>
+            <ul>
+              <li>Proyectos ilimitados</li>
+              <li>Hasta 10 usuarios</li>
+              <li>Soporte prioritario</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Elegir plan</a>
+          </div>
+          <div class="plan reveal">
+            <h3>Empresa</h3>
+            <p class="price">S/ 99<span>/mes</span></p>
+            <ul>
+              <li>Todo lo de Pro</li>
+              <li>Usuarios ilimitados</li>
+              <li>Soporte 24/7</li>
+            </ul>
+            <a href="#contacto" class="btn btn-outline">Elegir plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto / CTA -->
+    <section class="section cta" id="contacto">
+      <div class="container cta-inner">
+        <h2>¿Listo para empezar?</h2>
+        <p>Déjanos tu correo y te enviaremos acceso anticipado.</p>
+        <form class="cta-form" novalidate>
+          <input type="email" id="email" placeholder="tucorreo@ejemplo.com" aria-label="Correo electrónico" required>
+          <button type="submit" class="btn btn-light">Suscribirme</button>
+        </form>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Nexo. Todos los derechos reservados.</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Términos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
